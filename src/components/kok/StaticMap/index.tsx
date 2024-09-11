@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 
+import spotPin from 'assets/img/pinIcon/spotPin.svg';
+
 import styles from './StaticMap.module.css';
-import spotPin from '../../assets/img/pinIcon/spotPin.svg';
 
 interface StaticMapProps {
   lat?: number;

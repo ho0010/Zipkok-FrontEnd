@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { OptionsComponent, Furnitures, TextInput } from 'components';
+import furnitures from 'constants/furnitures';
+
+import { OptionsComponent, TextInput } from 'components';
 
 import styles from './Inner.module.css';
 
@@ -19,7 +21,7 @@ export default function Inner({
   options,
   setOptions,
 }: InnerProps) {
-  const filteredFurnitures = Furnitures.filter((furniture) =>
+  const filteredFurnitures = furnitures.filter((furniture) =>
     furnitureOptions.includes(furniture.name),
   );
   console.log(direction);

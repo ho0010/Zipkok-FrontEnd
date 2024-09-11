@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Header from 'components/Header';
+import Header from 'components/common/layout/Header';
 import { FreeMode, Pagination, Navigation, Thumbs } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
