@@ -1,31 +1,28 @@
-import AddressSearchPage from './AddressSearchPage';
-import BottomBtn from './BottomBtn';
-import BottomSheet from './BottomSheet';
-import Btn from './Btn';
-import CheckBox from './CheckBox';
-import CompleteAnim from './CompleteAnim';
-import EditFilterBtn from './EditFilterBtn';
-import EditGenderBtn from './EditGenderBtn';
-import Furnitures from './Furnitures';
-import Header from './Header';
-import Highlight from './Highlight';
-import IconBtn from './IconBtn';
-import IconText from './IconText';
-import KoklistGroup from './KoklistGroup';
-import NaviBar from './NaviBar';
-import OptionsComponent from './Options';
-import PropertyComponents from './Property';
-import PropertyItem from './PropertyItem';
-import RadioBtn from './RadioBtn';
-import RangeSlider from './RangeSlider';
-import Splash from './Splash';
-import StarRating from './StarRating';
-import StaticMap from './StaticMap';
-import SwiperCom from './Swiper';
-import Swiper_modal from './Swiper_modal';
-import SwiperItem from './SwiperItem';
-import TextInput from './TextInput';
-import TopMenu from './TopMenu';
+import Highlight from 'components/common/Highlight';
+
+import AddressSearchPage from './common/AddressSearchPage';
+import BottomBtn from './common/BottomBtn';
+import Btn from './common/Btn';
+import CheckBox from './common/CheckBox';
+import CompleteAnim from './common/CompleteAnim';
+import IconBtn from './common/IconBtn';
+import Header from './common/layout/Header';
+import NaviBar from './common/layout/NaviBar';
+import TopMenu from './common/layout/TopMenu';
+import RadioBtn from './common/RadioBtn';
+import RangeSlider from './common/RangeSlider';
+import Splash from './common/Splash';
+import TextInput from './common/TextInput';
+import BottomSheet from './home/BottomSheet';
+import KoklistGroup from './kok/KoklistGroup';
+import OptionsComponent from './kok/Options';
+import PropertyComponents from './kok/Property';
+import PropertyItem from './kok/PropertyItem';
+import StarRating from './kok/StarRating';
+import StaticMap from './kok/StaticMap';
+import SwiperCom from './kok/Swiper';
+import Swiper_modal from './kok/Swiper_modal';
+import SwiperItem from './kok/SwiperItem';
 
 export {
   AddressSearchPage,
@@ -33,13 +30,10 @@ export {
   Btn,
   CheckBox,
   CompleteAnim,
-  EditFilterBtn,
-  EditGenderBtn,
   BottomSheet,
   Header,
   Highlight,
   IconBtn,
-  IconText,
   KoklistGroup,
   NaviBar,
   OptionsComponent,
@@ -55,5 +49,4 @@ export {
   StarRating,
   SwiperItem,
   StaticMap,
-  Furnitures,
 };

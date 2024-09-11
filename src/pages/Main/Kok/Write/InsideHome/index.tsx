@@ -1,10 +1,12 @@
 import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import Furnitures from 'constants/furnitures';
+
 import compassIcon from 'assets/img/common/compass.svg';
 import deleteBtnIcon from 'assets/img/fill/delete.svg';
 import cameraIcon from 'assets/img/line(1)/camera.svg';
-import { TextInput, OptionsComponent, Furnitures } from 'components';
+import { TextInput, OptionsComponent } from 'components';
 
 import styles from './InsideHome.module.css';
 
