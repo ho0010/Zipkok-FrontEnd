@@ -3,8 +3,8 @@ import { useNavigate, useLocation } from 'react-router-dom';
 
 import { getKokReview, putKok, postKok } from 'apis';
 import { UserKokOption } from 'apis/user/getUserKokOption';
-import BottomBtn from 'components/BottomBtn';
-import StarRating from 'components/StarRating';
+import BottomBtn from 'components/common/BottomBtn';
+import StarRating from 'components/kok/StarRating';
 import useModal from 'contexts/modalStore';
 import useUIStore from 'contexts/uiStore';
 import Tags from 'model/Review';

@@ -8,7 +8,7 @@ interface CheckboxProps {
   onChange?: (checked: boolean) => void;
 }
 
-export default function Checkbox({ checked, onChange }: CheckboxProps) {
+const Checkbox = ({ checked, onChange }: CheckboxProps) => {
   const [isChecked, setIsChecked] = useState(checked);
 
   function handleClick() {
@@ -21,4 +21,5 @@ export default function Checkbox({ checked, onChange }: CheckboxProps) {
       <img src={isChecked ? checkIcon : defaultIcon} />
     </button>
   );
-}
+};
+export default Checkbox;

@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { patchUserFilter } from 'apis/user/patchUserFilter';
-import BottomBtn from 'components/BottomBtn';
+import BottomBtn from 'components/common/BottomBtn';
+import { Col } from 'components/common/flex/Flex';
 import useMyPageStore from 'contexts/useMyPageStore';
 import useRadioBtn from 'hooks/useRadioBtn';
 import Jeonse from 'pages/Onboarding/Price/priceSlider/Jeonse';
 import Monthly from 'pages/Onboarding/Price/priceSlider/Monthly';
 import Purchase from 'pages/Onboarding/Price/priceSlider/Purchase';
 import isLoggedIn from 'utils/isLoggedIn';
-
-import styles from './Filter.module.css';
 
 import type { HouseType } from 'types/HouseType';
 import type { PriceType } from 'types/PriceType';
@@ -28,12 +29,12 @@ interface FilterProps {
   };
 }
 
-export default function Filter({
+const Filter = ({
   setFilterOpen,
   selectedHouseType,
   selectedPriceType,
   prices,
-}: FilterProps) {
+}: FilterProps) => {
   // 집 형태 라디오 버튼
   const houseTypeOptions: { value: HouseType; content: string }[] = [
     { value: 'ONEROOM', content: '원룸' },
@@ -143,22 +144,37 @@ export default function Filter({
   };
 
   return (
-    <div className={styles.root}>
+    //TODO: emotion css써야되는데 왜 안될까요
+    <Col gap={26} style={{ zIndex: 101 }}>
       {/* 바텀 시트 Content */}
       {/* 필터 설정 */}
-      <div className={styles.container}>
-        <h1 className={styles.title}>필터 설정</h1>
+      <Col gap={'24'} padding={'0px 20px'}>
+        <title>필터 설정</title>
 
-        <div className={styles.filterContainers}>
+        <Col gap={'11'}>
           {/* 가격 타입 */}
-          <PriceTypeRadioBtnContainer className={styles.filterContainer} />
+          <PriceTypeRadioBtnContainer
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              gap: '4px 8px',
+              flexWrap: 'wrap',
+            }}
+          />
 
           {/* 집 타입 */}
-          <HouseTypeRadioBtnContainer className={styles.filterContainer} />
-        </div>
+          <HouseTypeRadioBtnContainer
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              gap: '4px 8px',
+              flexWrap: 'wrap',
+            }}
+          />
+        </Col>
 
         {/* 가격 설정 */}
-        <div className={styles.priceContainer}>
+        <Col gap={'24'}>
           {priceType === 'MONTHLY' && (
             <Monthly
               onChange1={(rangeStart, rangeEnd) => {
@@ -188,10 +204,19 @@ export default function Filter({
               defaultValues={[prices.price]}
             />
           )}
-        </div>
-      </div>
+        </Col>
+      </Col>
       <div style={{ height: '70px' }}></div>
       <BottomBtn text="저장" onClick={handleSaveBtnClick} />
-    </div>
+    </Col>
   );
-}
+};
+export default Filter;
+
+const title = styled.h1`
+  margin: 0;
+  color: var(--gray-color-gray100, #00000a);
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 600;
+`;

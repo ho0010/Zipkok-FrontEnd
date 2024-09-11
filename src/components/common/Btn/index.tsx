@@ -10,13 +10,7 @@ interface BtnProps {
   icon?: React.ReactNode;
 }
 
-export default function Btn({
-  onClick,
-  text,
-  isKeyboardOpen,
-  disabled,
-  icon,
-}: BtnProps) {
+const Btn = ({ onClick, text, isKeyboardOpen, disabled, icon }: BtnProps) => {
   return (
     <button
       className={`${styles.btn} ${!isKeyboardOpen ? styles.round : ''}`}
@@ -27,4 +21,5 @@ export default function Btn({
       <span>{text}</span>
     </button>
   );
-}
+};
+export default Btn;

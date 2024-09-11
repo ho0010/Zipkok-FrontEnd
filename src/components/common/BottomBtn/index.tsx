@@ -16,7 +16,7 @@ interface BottomBtnProps {
   style?: React.CSSProperties;
 }
 
-export default function BottomBtn({
+const BottomBtn = ({
   onClick,
   text,
   occupySpace = false,
@@ -25,7 +25,7 @@ export default function BottomBtn({
   icon,
   disabled = false,
   style,
-}: BottomBtnProps) {
+}: BottomBtnProps) => {
   console.assert(
     anchorText === '' || onAnchorClick !== undefined,
     'onAnchorClick must be provided if anchorText is provided',
@@ -54,4 +54,5 @@ export default function BottomBtn({
       />
     </div>
   );
-}
+};
+export default BottomBtn;

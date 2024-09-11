@@ -5,9 +5,10 @@ import { getPin } from 'apis';
 import { getMapRealEstate } from 'apis';
 import { MapRealEstate } from 'apis/realestate/getMapRealEstate';
 import pinIcon from 'assets/img/pinIcon/pin.svg';
-import { PropertyItem, BottomSheet } from 'components';
+import { PropertyItem } from 'components';
+import BottomSheet from 'components/home/BottomSheet';
 import HomeBottomSheet from 'components/home/home/BottomSheet';
-import Filter from 'components/home/home/Filter';
+import Filter from 'components/home/home/filter/Filter';
 import KakaoMap, { realEstateInfo } from 'components/home/home/KakaoMap';
 import SearchBox from 'components/home/home/SearchBox';
 import useAddressStore from 'contexts/addressStore';
@@ -30,7 +31,7 @@ interface mapLocationInfo {
   northEastLon?: number;
 }
 
-export default function Home() {
+const Home = () => {
   const [filterOpen, setFilterOpen] = useState(false);
   const [filterSet, setFilterSet] = useState(false);
   const [pins, setPins] = useState<Pin[]>([]);
@@ -289,4 +290,6 @@ export default function Home() {
       )}
     </div>
   );
-}
+};
+
+export default Home;

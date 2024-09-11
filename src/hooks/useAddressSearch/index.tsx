@@ -8,7 +8,7 @@ import { StatusCode } from 'types/StatusCode';
 
 import { AddressContainer } from './components';
 
-import type { TextInputProps } from 'components/TextInput';
+import type { TextInputProps } from 'components/common/TextInput';
 
 export default function useAddressSearch(
   handleAddressClick: (address: Address) => void,

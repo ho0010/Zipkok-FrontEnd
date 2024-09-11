@@ -10,7 +10,7 @@ interface CompleteProps {
   subtitle?: string;
 }
 
-export default function CompleteAnim({ title, subtitle }: CompleteProps) {
+const CompleteAnim = ({ title, subtitle }: CompleteProps) => {
   return (
     <div className={styles.container}>
       <Lottie
@@ -24,4 +24,5 @@ export default function CompleteAnim({ title, subtitle }: CompleteProps) {
       </div>
     </div>
   );
-}
+};
+export default CompleteAnim;

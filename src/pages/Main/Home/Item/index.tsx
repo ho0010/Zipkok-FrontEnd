@@ -6,7 +6,7 @@ import { deleteZim } from 'apis';
 import { GetRealEstateInfoResult } from 'apis/realestate/getRealEstateInfo';
 import { getRealEstateInfo } from 'apis/realestate/getRealEstateInfo';
 import { BottomBtn } from 'components';
-import Property from 'components/Property';
+import Property from 'components/kok/Property';
 import useModal from 'contexts/modalStore';
 import useUIStore from 'contexts/uiStore';
 import { StatusCode } from 'types/StatusCode';

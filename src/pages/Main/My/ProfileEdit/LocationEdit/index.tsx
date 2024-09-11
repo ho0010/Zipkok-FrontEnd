@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { AddressSearchPage } from 'components';
 import useAddressStore from 'contexts/addressStore';
 import useUIStore from 'contexts/uiStore';
+import { Address } from 'interface/Address';
 
 export default function LocationEdit() {
   const ui = useUIStore();
@@ -23,7 +24,7 @@ export default function LocationEdit() {
 
   return (
     <AddressSearchPage
-      confirmLocation={(address) => {
+      confirmLocation={(address: Address) => {
         addressStore.setAddress(address, 'profileEdit');
         navigate(-1);
       }}

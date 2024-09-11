@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import defaultIcon from 'assets/img/check/check_default.svg';
 import selectIcon from 'assets/img/check/check_selected.svg';
 import cameraIcon from 'assets/img/line(1)/camera.svg';
+import Checkbox from 'components/common/CheckBox';
 
 import styles from './KoklistGroup.module.css';
-import Checkbox from '../CheckBox';
 
 interface Koklist {
   name: string;
@@ -18,11 +18,7 @@ interface KoklistGroupProps {
   selected: boolean;
 }
 
-export default function KoklistGroup({
-  title,
-  koklists,
-  selected,
-}: KoklistGroupProps) {
+const KoklistGroup = ({ title, koklists, selected }: KoklistGroupProps) => {
   const [isSelected, setIsSelected] = useState(selected);
 
   function handleSelect() {
@@ -55,4 +51,5 @@ export default function KoklistGroup({
       )}
     </div>
   );
-}
+};
+export default KoklistGroup;

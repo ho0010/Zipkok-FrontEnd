@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 import backIcon from 'assets/img/line(2)/left_arrow.svg';
+import RecentAddress from 'components/home/search/RecentAddress';
 import useAddressStore from 'contexts/addressStore';
 import useUIStore from 'contexts/uiStore';
 import useAddressSearch from 'hooks/useAddressSearch';
 
 import styles from './Search.module.css';
-import RecentAddress from '../../../../components/home/search/RecentAddress';
 
 import type { Address } from 'interface/Address';
 
@@ -17,7 +17,7 @@ export interface AddressHistory {
   date: string;
 }
 
-export default function Search() {
+const Search = () => {
   const { setAddress } = useAddressStore();
 
   const [searched, setSearched] = useState(false);
@@ -40,7 +40,7 @@ export default function Search() {
 
   const navigate = useNavigate();
 
-  function handleAddressClick(address: Address) {
+  const handleAddressClick = (address: Address) => {
     localStorage.setItem(
       'recentSearch',
       JSON.stringify([
@@ -55,9 +55,9 @@ export default function Search() {
 
     setAddress(address, 'home_search');
     navigate(-1);
-  }
+  };
 
-  function handleRecentClick(history: AddressHistory) {
+  const handleRecentClick = (history: AddressHistory) => {
     localStorage.setItem(
       'recentSearch',
       JSON.stringify([
@@ -71,7 +71,7 @@ export default function Search() {
 
     setAddress(history.address, 'home_search');
     navigate(-1);
-  }
+  };
 
   const [, addressCount, AddressSeachInput, AddressSearchResult, handleSubmit] =
     useAddressSearch(handleAddressClick);
@@ -135,4 +135,5 @@ export default function Search() {
       </div>
     </div>
   );
-}
+};
+export default Search;

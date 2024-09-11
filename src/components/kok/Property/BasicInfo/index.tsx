@@ -6,10 +6,10 @@ import maintanenceFeeIcon from 'assets/img/line(1)/money.svg';
 import areaIcon from 'assets/img/line(1)/size.svg';
 import houseTypeIcon from 'assets/img/line(1)/structure.svg';
 import { StaticMap } from 'components';
+import IconBtn from 'components/common/IconBtn';
 import convertHouseTypeToString from 'utils/convertHouseTypeToString';
 
 import styles from './BasicInfo.module.css';
-import IconBtn from '../../IconBtn';
 
 import type { Address } from 'interface/Address';
 import type { HouseType } from 'types/HouseType';
